@@ -313,28 +313,6 @@ iqtree3 -s alignment.fasta -m MFP -B 1000 -T 4
 - **[Ensembl](https://www.ensembl.org/)** — аннотированные геномы эукариот
 - **[KEGG](https://www.kegg.jp/)** — метаболические пути
 - **[UniProt](https://www.uniprot.org/)** — белковые последовательности
-- **[Pfam](https://pfam.xfam.org/)** — белковые домены
-- **[ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/)** — клинические варианты
-- **[gnomAD](https://gnomad.broadinstitute.org/)** — популяционные частоты
-
-### Туториалы и курсы
-
-- **[Coursera: Bioinformatics](https://www.coursera.org/specializations/bioinformatics)** — специализация UC San Diego
-- **[EMBL-EBI Training](https://www.ebi.ac.uk/training/)** — бесплатные онлайн-курсы
-- **[Galaxy project](https://galaxyproject.org/)** — интерактивные туториалы
-
-### Книги
-
-- **"Bioinformatics Algorithms"** by Compeau & Pevzner
-- **"Biological Sequence Analysis"** by Durbin et al.
-- **"Statistical Methods in Bioinformatics"** by Ewens & Grant
-
----
-
-## 📞 Контакты
-
-- **Вопросы и предложения**: [Issues](https://github.com/username/ngs-bioinformatics-pipeline/issues)
-- **Email**: your.email@example.com
 
 ---
 
