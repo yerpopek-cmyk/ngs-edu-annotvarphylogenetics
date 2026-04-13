@@ -1,0 +1,70 @@
+Структура репозитория
+ngs-bioinformatics-pipeline/
+│
+├── 📄 README.md                    # Главная страница проекта
+├── 📄 LICENSE                      # Лицензия (рекомендую MIT или GPL-3.0)
+├── 📄 CITATION.cff                 # Как цитировать ваш проект
+├── 📄 .gitignore                   # Исключаемые файлы (*.bam, *.vcf.gz, __pycache__/)
+├── 📄 requirements.txt             # Python-зависимости (если есть скрипты)
+├── 📄 environment.yml              # Conda-окружение для воспроизводимости
+│
+├── 📂 docs/                        # Теория и документация
+│   ├── 📄 01_genome_annotation.md
+│   ├── 📄 02_variant_calling.md
+│   ├── 📄 03_structural_variants.md
+│   ├── 📄 04_variant_interpretation.md
+│   ├── 📄 05_phylogenetics.md
+│   ├── 📄 formulas_reference.md    # Сводка всех формул с пояснениями
+│   └── 📄 glossary.md              # Словарь терминов
+│
+├── 📂 pipelines/                   # Готовые пайплайны (bash/nextflow/snakemake)
+│   ├── 📂 annotation/
+│   │   ├── 📄 prokka_pipeline.sh
+│   │   ├── 📄 functional_annotation.sh
+│   │   └── 📄 README.md            # Как запустить, вход/выход
+│   │
+│   ├── 📂 variant_calling/
+│   │   ├── 📄 freebayes_pipeline.sh
+│   │   ├── 📄 bcftools_filtering.sh
+│   │   ├── 📄 gatk_haplotypecaller.sh
+│   │   └── 📄 README.md
+│   │
+│   ├── 📂 phylogenetics/
+│   │   ├── 📄 mafft_alignment.sh
+│   │   ├── 📄 iqtree_analysis.sh
+│   │   ├── 📄 bootstrap_validation.sh
+│   │   └── 📄 README.md
+│   │
+│   └── 📄 master_workflow.sh       # Объединённый пайплайн (опционально)
+│
+├── 📂 scripts/                     # Вспомогательные утилиты
+│   ├── 📄 parse_vcf_stats.py
+│   ├── 📄 calculate_n50.py
+│   ├── 📄 plot_phylogeny.R
+│   └── 📄 utils.sh                 # Общие функции для bash-скриптов
+│
+├── 📂 data/                        # Примеры данных (маленькие!)
+│   ├── 📂 reference/
+│   │   ├── 📄 example_ref.fasta
+│   │   └── 📄 genes.gff3
+│   ├── 📂 samples/
+│   │   ├── 📄 sample_R1.fastq.gz   # Только мини-примеры!
+│   │   └── 📄 sample_R2.fastq.gz
+│   └── 📄 README.md                # ⚠️ Предупреждение: не коммитьте большие файлы
+│
+├── 📂 results/                     # .gitignore! Только шаблоны отчётов
+│   ├── 📄 example_annotation.gff
+│   ├── 📄 example_variants.vcf
+│   ├── 📄 example_tree.nwk
+│   └── 📄 .gitkeep                 # Чтобы папка отслеживалась в git
+│
+├── 📂 tests/                       # Автотесты для пайплайнов
+│   ├── 📄 test_annotation.sh
+│   ├── 📄 test_variant_calling.sh
+│   └── 📄 test_data/               # Минимальные тестовые файлы
+│
+└── 📂 figures/                     # Схемы, диаграммы, скриншоты
+    ├── 📄 pipeline_overview.png
+    ├── 📄 evidence_ladder.svg
+    ├── 📄 nj_algorithm_schema.png
+    └── 📄 vcf_structure_explained.png
