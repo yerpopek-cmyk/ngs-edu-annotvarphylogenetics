@@ -27,6 +27,24 @@ git clone https://github.com/yourusername/ngs-bioinformatics-pipeline.git
 cd ngs-bioinformatics-pipeline
 ```
 
+### 2. Установка окружения
+```bash
+# Через conda (рекомендуется)
+conda env create -f environment.yml
+conda activate ngs-pipeline
+
+# Или вручную: установить зависимости из requirements.txt
+pip install -r requirements.txt
+```
+
+### 3. Запуск примера аннотации
+```bash
+bash pipelines/annotation/prokka_pipeline.sh \
+  --input data/samples/example.fasta \
+  --outdir results/annotation_test \
+  --kingdom Bacteria
+```
+
 ---
 
 ## 📚 Теоретическая база
