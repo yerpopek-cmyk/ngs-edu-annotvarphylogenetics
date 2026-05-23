@@ -1,0 +1,30 @@
+name: annotation
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # ── Core pipeline tools ─────────────────────────────────────────────────
+  # prokka: prokaryote genome annotation pipeline (Seemann 2014)
+  #   Wraps Prodigal (gene prediction), BLAST, tRNAscan-SE, RNAmmer
+  - prokka
+
+  # diamond: fast protein aligner; ~500× faster than BLAST at similar sensitivity
+  - diamond
+
+  # hmmer: profile HMM suite; hmmscan searches sequences against HMM profiles
+  - hmmer
+
+  # ── Utility tools ───────────────────────────────────────────────────────
+  # htslib provides bgzip (block-gzip) and tabix (genomic index)
+  - htslib
+
+  # seqkit: fast FASTA/FASTQ manipulation (used for subsetting in testing)
+  - seqkit
+
+  - wget
+
+  # ── Python environment ──────────────────────────────────────────────────
+  - python=3.12
+  - biopython      # SeqIO, sequence parsing utilities
+  - pip

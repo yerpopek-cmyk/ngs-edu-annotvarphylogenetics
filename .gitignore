@@ -1,0 +1,111 @@
+# =============================================================================
+# .gitignore — NGS Education Hub
+# =============================================================================
+
+# ── NGS data files (often large and private) ─────────────────────────────────
+*.bam
+*.bai
+*.cram
+*.crai
+*.sam
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.vcf.gz
+*.vcf.gz.tbi
+*.bcf
+*.bcf.csi
+
+# ── Reference databases (too large for git) ──────────────────────────────────
+*.dmnd
+*.hmm.h3f
+*.hmm.h3i
+*.hmm.h3m
+*.hmm.h3p
+*.hmm.gz
+
+# BWA index files
+*.amb
+*.ann
+*.bwt
+*.pac
+*.sa
+
+# FASTA index
+*.fai
+
+# tabix index
+*.tbi
+
+# ── Pipeline outputs ──────────────────────────────────────────────────────────
+pipelines/annotation/outputs/
+pipelines/variants/outputs/
+pipelines/phylogenetics/outputs/
+test_data/
+
+# Keep the .gitkeep files that mark empty tracked directories
+!**/.gitkeep
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.coverage
+*.cover
+.tox/
+venv/
+.venv/
+env/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Conda ─────────────────────────────────────────────────────────────────────
+.conda/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+!shared/   # don't ignore the shared/ directory itself
+
+# ── Temporary files ───────────────────────────────────────────────────────────
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Compressed archives ───────────────────────────────────────────────────────
+# (individual .gz data files already covered above)
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tgz
+*.7z
+*.rar
+*.zst
+
+# ── Environment variables ─────────────────────────────────────────────────────
+.env
+.env.local
+.env.*

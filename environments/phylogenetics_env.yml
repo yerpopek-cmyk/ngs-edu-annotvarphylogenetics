@@ -1,0 +1,36 @@
+name: phylogenetics_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # ── Alignment ────────────────────────────────────────────────────────────
+  # mafft: Multiple Alignment using Fast Fourier Transform
+  #   Iterative refinement method; handles diverse sequence lengths well
+  - mafft
+
+  # ── Alignment trimming ───────────────────────────────────────────────────
+  # clipkit: trims uninformative columns from alignments
+  #   kpic mode: keep parsimony-informative and constant sites
+  - clipkit
+
+  # ── Tree building ─────────────────────────────────────────────────────────
+  # fasttree: approximate ML tree builder; fast enough for large datasets
+  #   Uses GTR+CAT model (discrete approximation of rate variation)
+  - fasttree
+
+  # iqtree: full maximum-likelihood tree builder with ModelFinder
+  #   Ultrafast bootstrap (UFBoot2) is significantly faster than standard
+  - iqtree
+
+  # ── Tree manipulation ────────────────────────────────────────────────────
+  # gotree: command-line tree manipulation (rerooting, pruning, converting)
+  - gotree
+
+  # newick_utils: additional Newick format utilities
+  - newick_utils
+
+  # ── Python environment ───────────────────────────────────────────────────
+  - python=3.12
+  - biopython     # SeqIO for FASTA/PHYLIP/Nexus conversion
+  - pip

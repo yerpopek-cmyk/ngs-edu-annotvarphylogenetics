@@ -1,0 +1,32 @@
+name: variants
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # ── Read alignment ───────────────────────────────────────────────────────
+  # bwa: Burrows-Wheeler Aligner — aligns short reads to a reference genome
+  - bwa
+
+  # samtools: SAM/BAM manipulation: sort, index, markdup, flagstat, faidx
+  - samtools
+
+  # ── Variant calling ──────────────────────────────────────────────────────
+  # freebayes: haplotype-aware Bayesian variant caller
+  - freebayes
+
+  # bcftools: VCF/BCF processing — filter, normalize, annotate, stats
+  - bcftools
+
+  # htslib: provides bgzip and tabix
+  - htslib
+
+  # ── Functional annotation ────────────────────────────────────────────────
+  # ensembl-vep: Variant Effect Predictor from Ensembl
+  #   Annotates variants with consequence, HGVS, gnomAD AF, ClinVar
+  - ensembl-vep
+
+  # ── Python environment ───────────────────────────────────────────────────
+  - python=3.12
+  - biopython
+  - pip
