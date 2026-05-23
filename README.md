@@ -4,7 +4,8 @@
 [![Conda](https://img.shields.io/badge/conda-supported-green.svg)](environments/)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://python.org)
 
-> **A hands-on, annotated bioinformatics repository** combining three production-grade NGS analysis pipelines — genome annotation, variant calling, and phylogenetics — with detailed theory, worked examples, and toy datasets for learning.
+> [!NOTE]
+> **This is a fully educational repository designed for students, educators, and bioinformatics teams.** It combines three production-grade NGS analysis pipelines—genome annotation, variant calling, and phylogenetics—with detailed theory, step-by-step explanations, and synthetic test datasets for hands-on learning.
 
 ---
 
